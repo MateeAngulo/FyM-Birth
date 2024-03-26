@@ -1,0 +1,107 @@
+@font-face {
+    font-family: ITC;
+    font-weight: 900;
+    src: url(ITCBold.ttf);
+}
+@font-face {
+    font-family: ITC;
+    font-weight: 500;
+    src: url(ITCMedium.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}.background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(1px);
+}
+.box{
+    background-color: #000000c2;
+    color: white;
+    font-family: ITC;
+    left: 20%;
+    z-index: 1;
+    right: 20%;
+    max-height: 70vh;
+    position: absolute;
+    text-align: center;
+    height: 80%;
+    top: 10%;
+    overflow: hidden;
+    font-size: 4vw;
+    padding: 4%;
+    border-radius: 10px;
+}
+p{
+padding-bottom: 10px;
+}
+.lista-externa {
+    position: absolute;
+    bottom: 0; /* Posiciona la lista en la parte inferior del contenedor */
+    width: 100%; /* Ancho completo */
+}
+
+#creditos-lista {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; /* Quita los estilos de la lista */
+}
+
+#creditos-lista li {
+    display: block; /* Muestra los elementos de la lista como bloques */
+    opacity: 0; /* Inicialmente, los elementos son transparentes */
+    animation: mostrar 70s linear infinite; /* Aplica la animación de desplazamiento */
+}
+
+@keyframes mostrar {
+    0% {
+        opacity: 0; /* Los elementos comienzan completamente transparentes */
+        transform: translateY(2300%); /* Empiezan debajo del contenedor */
+    }
+    5%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 1; /* Al final de la animación, los elementos son completamente visibles */
+        transform: translateY(-5000%); /* Suben hasta estar dentro del contenedor */
+    }
+}
+li{
+    margin-bottom: 8%;
+}
+.pointer{
+    color: red;
+}
+.titulo, .confirmar{
+    position: absolute;
+    color: white;
+}
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    z-index: 9999;
+    display: none;
+    background-color: black;
+  }
+  
+  .content {
+    display: none;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
